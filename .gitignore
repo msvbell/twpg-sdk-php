@@ -1,0 +1,13 @@
+# IDE:
+.idea/
+bin
+
+# Composer
+composer.phar
+composer.lock
+/vendor/
+
+# Tests output
+/tests/_output/
+/build/
+package/cp-twpg-sdk.phar

@@ -1,0 +1,76 @@
+{
+  "name": "skytech/payment-php-sdk",
+  "description": "Skytech's Payment SDK for PHP",
+  "keywords": [
+    "payment",
+    "skytech",
+    "sdk"
+  ],
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Elena Arevkina",
+      "email": "ea@skytecrussia.com"
+    },
+    {
+      "name": "Sergey Ivanov",
+      "email": "sv@skytecrussia.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.6|>=7.0",
+    "ext-curl": "*",
+    "ext-openssl": "*",
+    "ext-simplexml": "*",
+    "ext-xmlwriter": "*",
+    "guzzlehttp/guzzle": "~5.1",
+    "league/iso3166": "^2.0",
+    "respect/validation": "1.1.14",
+    "sabre/xml": "^1.5",
+    "matriphe/iso-639": "^1.2",
+    "monolog/monolog": "^1.23"
+  },
+  "require-dev": {
+    "ext-json": "*",
+    "codeception/codeception": "2.3.6",
+    "consolidation/robo": "^1.0.0",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
+    "phploc/phploc": "^4.0",
+    "phpmd/phpmd": "^2.6",
+    "roave/security-advisories": "dev-master",
+    "sebastian/phpdcd": "^1.0",
+    "squizlabs/php_codesniffer": "^3.1",
+    "symfony/process": "^3.3.0",
+    "wimg/php-compatibility": "*"
+  },
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "Compassplus\\Sdk\\": "src/"
+    }
+  },
+  "config": {
+    "platform": {
+      "php": "5.6"
+    },
+    "bin-dir": "bin"
+  },
+  "scripts": {
+    "test": [
+      "composer validate",
+      "@composer install",
+      "codecept run"
+    ],
+    "phar": [
+      "Composer\\Config::disableProcessTimeout",
+      "robo build:phar"
+    ],
+    "build": "robo build"
+  },
+  "support" : {
+    "issues" : "https://github.com/skytechrus/payment-php-sdk/issues",
+    "source" : "https://github.com/skytechrus/payment-php-sdk"
+  },
+  "homepage" : "https://github.com/skytechrus/payment-php-sdk"
+}
